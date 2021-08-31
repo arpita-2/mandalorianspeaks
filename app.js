@@ -14,4 +14,14 @@ function errorHandler(error)
 {console.log("Error Occured!");
 alert("Something went wrong! please try again");
 }
+
+function buttonClickHandler(){
+    var inputText = textInput.value;
+    fetch(getTranslationURL(inputText))
+    .then(response => response.json())
+    .then(json =>{
+        var translatedText = json.contents.translated;
+        translateOutput.innerText = translatedText;
+    })
+}
 	
