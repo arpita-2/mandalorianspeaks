@@ -23,5 +23,6 @@ function buttonClickHandler(){
         var translatedText = json.contents.translated;
         translateOutput.innerText = translatedText;
     })
-}
+    .catch(errorHandler)
+};
 	
